@@ -1,0 +1,24 @@
+<table class="printer-list">
+  <header>
+    <tr>
+      <th>
+        Pritner name
+      </th>
+      <th>
+        Admin uri
+      </th>
+      <th>
+        Is installed
+      </th>
+    </tr>
+  </header>
+  <tbody>
+    <tr *ngFor="let printer of printers">
+      <td>
+        {{printer.name}}
+      </td>
+      <td>{{printer.adminUri}}</td>
+      <td>{{printer.installed}}</td>
+    </tr>
+  </tbody>
+</table>

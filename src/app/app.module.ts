@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { PrinterComponent } from './printer/printer.component';
 import { PrinterListComponent } from './printer-list/printer-list.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { DriverListComponent } from './driver-list/driver-list.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     PrinterComponent,
-    PrinterListComponent
+    PrinterListComponent,
+    DriverListComponent
   ],
   imports: [
     BrowserModule,

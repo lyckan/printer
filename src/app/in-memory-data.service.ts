@@ -2,18 +2,37 @@ import { InMemoryDbService } from 'angular-in-memory-web-api';
 
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
-    const heroes = [
-      { id: 11, name: 'Mr. Nice' },
-      { id: 12, name: 'Narco' },
-      { id: 13, name: 'Bombasto' },
-      { id: 14, name: 'Celeritas' },
-      { id: 15, name: 'Magneta' },
-      { id: 16, name: 'RubberMan' },
-      { id: 17, name: 'Dynama' },
-      { id: 18, name: 'Dr IQ' },
-      { id: 19, name: 'Magma' },
-      { id: 20, name: 'Tornado' }
+    const printers = [{
+        adminUri: 'http://adminur.se',
+        color: false,
+        duplex: true,
+        id: 232323,
+        installed: true,
+        isBonjour: true,
+        name: 'Das printer',
+        uri: 'http://printeruri.se' 
+      },
+    {
+      adminUri: 'http://adminur.se',
+        color: false,
+        duplex: true,
+        id: 132323,
+        installed: true,
+        isBonjour: true,
+        name: 'The printer',
+        uri: 'http://printeruri.se' 
+      },
+      {
+        adminUri: 'http://adminur.se',
+          color: false,
+          duplex: true,
+          id: 132322,
+          installed: true,
+          isBonjour: true,
+          name: 'Printer Pete yeah',
+          uri: 'http://printeruri.se' 
+        }
     ];
-    return {heroes};
+    return {printers};
   }
 }

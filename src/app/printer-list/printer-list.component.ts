@@ -9,14 +9,17 @@ import { PrinterService } from '../printer.service';
 })
 export class PrinterListComponent implements OnInit {
   printers: Printer[];
+  isLoading: boolean;
   constructor(private printerService: PrinterService) { }
 
   ngOnInit() {
+    
     this.getPrinters();
   }
 
   getPrinters(): void {
-    this.printers = this.printerService.getPrinters();
+    this.isLoading = true;
+    this.printerService.getPrinters().subscribe(printers => {this.printers = printers; this.isLoading = false;});
   }
 
 }

@@ -12,6 +12,7 @@ import { DriverListComponent } from './driver-list/driver-list.component';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './in-memory-data.service';
 import { PACKAGE_ROOT_URL } from '@angular/core/src/application_tokens';
+import { PrinterFilterComponent } from './printer-filter/printer-filter.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { PACKAGE_ROOT_URL } from '@angular/core/src/application_tokens';
     PrinterComponent,
     PrinterListComponent,
     DriverListComponent,
+    PrinterFilterComponent,
     
   ],
   imports: [

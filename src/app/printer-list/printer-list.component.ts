@@ -22,4 +22,8 @@ export class PrinterListComponent implements OnInit {
     this.printerService.getPrinters().subscribe(printers => {this.printers = printers; this.isLoading = false;});
   }
 
+  filterPrinters(filter: string): void {
+    console.log('filter on ' + filter);
+  }
+
 }

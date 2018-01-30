@@ -8,6 +8,15 @@
     Loading... {{isLoading}}
    </div>
 </div> 
+
+<div class="row">
+    <div class="col-md-6">
+      <app-printer-filter (filter)="filterPrinters($event)"></app-printer-filter>
+     </div>
+     <div class="col-md-6">
+    </div>
+  </div> 
+
 <div class="row">
     <div class="col-md-12">
       <table class="printer-list table table-striped">

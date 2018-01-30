@@ -15,5 +15,13 @@ export class PrinterService {
   getPrinters (): Observable<Printer[]> {
     return this.http.get<Printer[]>(this.printersUrl)
   }
+
+  searchPrinters(term: string): Observable<Printer[]> {
+    if (!term.trim()) {
+      // if not search term, return empty hero array.
+      return of([]);
+    }
+    return this.http.get<Peter[]>(`api/printers/?name=${term}`);
+  }
   
 }

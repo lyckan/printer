@@ -21,7 +21,7 @@ export class PrinterService {
       // if not search term, return empty hero array.
       return of([]);
     }
-    return this.http.get<Peter[]>(`api/printers/?name=${term}`);
+    return this.http.get<Printer[]>('api/printers/?name='+term);
   }
   
 }

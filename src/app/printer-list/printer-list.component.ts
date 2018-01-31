@@ -21,8 +21,7 @@ export class PrinterListComponent implements OnInit {
     this.isLoading = true;
     this.printerService.getPrinters().subscribe(printers => {
       this.printers = printers; 
-      this.printers = this.printers.filter(printer => printer.name.includes(filter));
-      
+      this.printers = this.printers.filter(printer => printer.name.toLowerCase().includes(filter.toLowerCase()));
       this.isLoading = false;
     });
   }

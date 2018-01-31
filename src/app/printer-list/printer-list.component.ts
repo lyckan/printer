@@ -17,13 +17,18 @@ export class PrinterListComponent implements OnInit {
     this.getPrinters();
   }
 
-  getPrinters(): void {
+  getPrinters(filter: string = ''): void {
     this.isLoading = true;
-    this.printerService.getPrinters().subscribe(printers => {this.printers = printers; this.isLoading = false;});
+    this.printerService.getPrinters().subscribe(printers => {
+      this.printers = printers; 
+      this.printers = this.printers.filter(printer => printer.name.includes(filter));
+      
+      this.isLoading = false;
+    });
   }
 
   filterPrinters(filter: string): void {
-    console.log('filter on ' + filter);
+      this.getPrinters(filter);
   }
 
 }
